@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150724174720) do
+ActiveRecord::Schema.define(version: 20150725072203) do
+
+  create_table "directors", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "contact"
+    t.string   "employee_id"
+    t.string   "email_address"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "employees", force: :cascade do |t|
     t.string   "first_name"
@@ -22,6 +32,42 @@ ActiveRecord::Schema.define(version: 20150724174720) do
     t.string   "Employee_ID"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "stackholders", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "phone_number"
+    t.string   "email_address"
+    t.string   "employee_ID"
+    t.string   "category"
+    t.string   "region_of_origin"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "student_detailes", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "student_number"
+    t.string   "region"
+    t.string   "gender"
+    t.string   "class_of_student"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "parent_name"
+    t.string   "phone_number"
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "student_number"
+    t.string   "region"
+    t.string   "gender"
+    t.string   "class"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end
