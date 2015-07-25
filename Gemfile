@@ -18,6 +18,7 @@ gem 'paperclip'
 gem 'therubyracer'
 gem 'kaminari'
 gem 'rails_admin'
+gem 'heroku'
 
 
 # Use jquery as the JavaScript library
