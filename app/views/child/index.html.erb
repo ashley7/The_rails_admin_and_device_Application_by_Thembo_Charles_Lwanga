@@ -35,12 +35,10 @@
 								email = counter.email_address
 								%>
 
-								<tr class = "success">
-									<td>
-
-
-										<a href="#myModal" class="btn btn-success" data-toggle="modal"><%= id%></a>
-			<div id="myModal" class="modal fade">
+					<tr class = "success">
+						<td>
+			<a href="#<%= id%>" class="btn btn-success" data-toggle="modal"><%= id%></a>
+			<div id="<%= id%>" class="modal fade">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -48,9 +46,11 @@
 								&times
 							</a>
 							<h2><%= name%></h2>
+
 						</div>
 						<div class="modal-body">
-							<p>Image here</p>
+							<p>Contact: <%= contact%></p>
+							<p>Email: <%= email%></p>
 							 
 						</div>
 						<div class="modal-footer">
