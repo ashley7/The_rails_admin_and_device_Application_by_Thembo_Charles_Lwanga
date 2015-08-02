@@ -1,5 +1,5 @@
 class Stackholder < ActiveRecord::Base
-	validates :first_name, :last_name, :phone_number, :email_address, :employee_id, :category, :region_of_origin, presence: true
+	validates :first_name, :last_name, :phone_number, :email_address, :employee_ID, :category, :region_of_origin, presence: true
 def region_of_origin_enum
 	['Wester', 'Central', 'Eastern', 'Northern']
 	
