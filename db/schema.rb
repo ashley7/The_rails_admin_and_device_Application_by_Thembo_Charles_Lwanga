@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150728135453) do
+ActiveRecord::Schema.define(version: 20150731115130) do
 
   create_table "directors", force: :cascade do |t|
     t.string   "first_name"
@@ -23,26 +23,15 @@ ActiveRecord::Schema.define(version: 20150728135453) do
     t.datetime "updated_at",    null: false
   end
 
-  create_table "employees", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "Last_name"
-    t.integer  "age"
-    t.string   "phone_number"
-    t.string   "District"
-    t.string   "Employee_ID"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.string   "body"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+  create_table "fileuploads", force: :cascade do |t|
+    t.string   "employee_id"
+    t.string   "class_name"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "document_file_name"
+    t.string   "document_content_type"
+    t.integer  "document_file_size"
+    t.datetime "document_updated_at"
   end
 
   create_table "stackholders", force: :cascade do |t|
@@ -70,15 +59,17 @@ ActiveRecord::Schema.define(version: 20150728135453) do
     t.string   "phone_number"
   end
 
-  create_table "students", force: :cascade do |t|
+  create_table "user_profiles", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "student_number"
-    t.string   "region"
+    t.date     "date_of_birth"
+    t.string   "email_address"
+    t.string   "nationality"
     t.string   "gender"
-    t.string   "class"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.string   "occupation"
+    t.string   "phone"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "users", force: :cascade do |t|
