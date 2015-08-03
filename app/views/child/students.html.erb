@@ -108,7 +108,7 @@
 			<td>Home Region</td>
 
 		</tr>
-<% for counter in $stokes do %>
+<% for counter in @stokes do %>
  <% name = counter.first_name
  lname = counter.last_name
  number = counter.phone_number
@@ -156,7 +156,7 @@
 									<td>Date</td>
 								</tr>
 							<% 
-							for count in $stokes do
+							for count in @stokes do
 								lname = count.first_name
 								fname = count.last_name
 								name = lname+" "+lname
